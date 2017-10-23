@@ -51,20 +51,29 @@ def plate():
     cv.place(x = 0, y = 320)
     cv.create_image(10, 10, image=photo, anchor='nw')
     app.mainloop()
+def tilt():
+    photo = n_plate.rotate(90)
+    photo = ImageTk.PhotoImage(n_plate)
+    cv = tk.Canvas()
+    cv.pack(side='top', fill='both', expand='yes')
 
+    cv.create_image(10, 10, image=photo, anchor='nw')
+    app.mainloop()
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Start Page", font=LARGE_FONT)
+        label = tk.Label(self, text="ANPR Bangla", font=LARGE_FONT)
         label.pack(pady=1, padx=100)
 
 
         button1 = tk.Button(self, text = "Load Image", command =load )
         button2 = tk.Button(self, text = "Show Plate", command = plate)
+        button3 = tk.Button(self, text = "Tilt", command = tilt)
+
 
         button1.pack(padx=100)
         button2.pack()
-
+        button3.pack()
 
 app = SeaofBTCapp()
 app.mainloop()
