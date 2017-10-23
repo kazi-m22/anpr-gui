@@ -1,5 +1,6 @@
 import tkinter   as tk
 import os
+import numpy
 LARGE_FONT = ("Verdana", 12)
 
 
