@@ -40,6 +40,7 @@ def load():
     photo = ImageTk.PhotoImage(im)
     cv = tk.Canvas()
     cv.pack(side='top', fill='both', expand='yes')
+    cv.place(x=0, y=0)
     cv.create_image(10, 10, image=photo, anchor='nw')
     app.mainloop()
 
@@ -47,6 +48,7 @@ def plate():
     photo = ImageTk.PhotoImage(n_plate)
     cv = tk.Canvas()
     cv.pack(side='top', fill='both', expand='yes')
+    cv.place(x = 0, y = 320)
     cv.create_image(10, 10, image=photo, anchor='nw')
     app.mainloop()
 
