@@ -52,12 +52,15 @@ def plate():
     cv.create_image(10, 10, image=photo, anchor='nw')
     app.mainloop()
 def tilt():
-    photo = n_plate.rotate(90)
-    photo = ImageTk.PhotoImage(n_plate)
-    cv = tk.Canvas()
-    cv.pack(side='top', fill='both', expand='yes')
+    photo2 = n_plate.rotate(90)
+    photo2.show()
+    photo2 = ImageTk.PhotoImage(n_plate)
+    cv2 = tk.Canvas()
 
-    cv.create_image(10, 10, image=photo, anchor='nw')
+    cv2.pack(side='top', fill='both', expand='yes')
+    cv2.place(x=500, y=320)
+
+    cv2.create_image(10, 10, image=photo2, anchor='nw')
     app.mainloop()
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
