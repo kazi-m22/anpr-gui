@@ -3,6 +3,8 @@ import os
 import numpy
 import cv2
 from PIL import Image,ImageTk
+global counter
+
 
 LARGE_FONT = ("Verdana", 12)
 im = Image.open('1.jpg')
@@ -90,15 +92,19 @@ def find_plate(im):
 
 
 
+
+
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="ANPR Bangla", font=LARGE_FONT)
         label.pack(pady=1, padx=100)
 
+        cars = os.listdir("./car/")
+        print(cars[2])
 
         button1 = tk.Button(self, text = "Load Image",
-                            command =lambda :find_plate("1.jpg"))
+                            command =lambda :find_plate(cars[2]))
 
 
 

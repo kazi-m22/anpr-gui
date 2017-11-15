@@ -4,7 +4,7 @@ import numpy as np
 # Importing NumPy,which is the fundamental package for scientific computing with Python
 
 # Reading Image
-img = cv2.imread("1.jpg")
+img = cv2.imread("./car/6.jpg")
 cv2.namedWindow("Original Image",cv2.WINDOW_NORMAL)
 # Creating a Named window to display image
 cv2.imshow("Original Image",img)
